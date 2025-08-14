@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./index.css"; // tumhara CSS file
 import HOME from "./pages/Home"; // tumhara Home component
+import Navbar from "./components/Navbar";
 
 export default function App() {
   useEffect(() => {
@@ -26,6 +27,7 @@ export default function App() {
 
   return (
     <>
+      <Navbar />
       <HOME />
     </>
   );

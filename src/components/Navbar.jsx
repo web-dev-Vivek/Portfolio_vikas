@@ -55,7 +55,7 @@ function CommandPalette({ open, onClose, commands = [] }) {
 
   return (
     <div
-      className="fixed inset-0 z-[60] flex items-start justify-center bg-black/50 p-4 sm:p-6"
+      className="fixed inset-0 z-[60] flex items-center justify-center bg-black/50 p-4 sm:p-6"
       aria-hidden={!open}
     >
       <div
@@ -63,7 +63,7 @@ function CommandPalette({ open, onClose, commands = [] }) {
         role="dialog"
         aria-modal="true"
         aria-label="Command Palette"
-        className="w-full max-w-2xl rounded-2xl bg-[#0f0f10] shadow-2xl ring-1 ring-white/10 overflow-hidden"
+        className="w-full max-w-2xl rounded-2xl bg-[#0f0f10] shadow-2xl ring-1 ring-white/10"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Search input */}
@@ -89,7 +89,7 @@ function CommandPalette({ open, onClose, commands = [] }) {
         </div>
 
         {/* Results */}
-        <div className="max-h-[50vh] overflow-auto">
+        <div className="max-h-[90vh]">
           {filtered.length === 0 ? (
             <div className="px-5 py-6 text-sm text-white/60">No results</div>
           ) : (
@@ -246,6 +246,7 @@ export default function Navbar() {
             className="hidden sm:flex gap-3 lg:gap-4 text-xs lg:text-sm"
           >
             <button
+              className="md:border-b border-transparent hover:border-white transition-all duration-500"
               onClick={() =>
                 document
                   .getElementById("home")
@@ -255,6 +256,7 @@ export default function Navbar() {
               HOME
             </button>
             <button
+              className="md:border-b border-transparent hover:border-white transition-all duration-500"
               onClick={() =>
                 document
                   .getElementById("about")
@@ -264,6 +266,7 @@ export default function Navbar() {
               ABOUT
             </button>
             <button
+              className="md:border-b border-transparent hover:border-white transition-all duration-500"
               onClick={() =>
                 document
                   .getElementById("contact")
