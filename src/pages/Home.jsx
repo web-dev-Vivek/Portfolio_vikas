@@ -267,6 +267,79 @@ function Home() {
               </div>
             </div>
           </div>
+
+          <div className="mt-25" style={{ fontFamily: "'Doto', sans-serif" }}>
+            Feature
+          </div>
+          <div
+            style={{ fontFamily: "'Share Tech Mono', monospace" }}
+            className="text-4xl font-bold"
+          >
+            Projects
+          </div>
+          <div className="flex flex-row items-center gap-8 bg-[#0F0F0F] p-6 rounded-lg max-w-3xl">
+            {/* Avatar Section */}
+            <div className="w-40 h-40 bg-yellow-400 rounded-lg flex items-center justify-center overflow-hidden">
+              <img
+                src="your-avatar.png"
+                alt="Profile Avatar"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Text + Skills */}
+            <div className="flex flex-col gap-3">
+              {/* Name */}
+              <h2 className="text-white text-xl font-bold">Vikas Jha</h2>
+
+              {/* Description */}
+              <p className="text-gray-300 text-sm max-w-xl">
+                I'm a Full Stack web developer and Open Source Contributor, I
+                love building products to solve real-world problems. I'm
+                specialized in building MVP's.
+              </p>
+
+              {/* Skills */}
+              <div>
+                <h3 className="text-gray-400 text-sm font-semibold mb-1">
+                  Skills
+                </h3>
+                <div className="flex items-center gap-2">
+                  <img src="/icons/react.svg" alt="React" className="w-6 h-6" />
+                  <img
+                    src="/icons/js.svg"
+                    alt="JavaScript"
+                    className="w-6 h-6"
+                  />
+                  <img
+                    src="/icons/ts.svg"
+                    alt="TypeScript"
+                    className="w-6 h-6"
+                  />
+                  <img
+                    src="/icons/mongo.svg"
+                    alt="MongoDB"
+                    className="w-6 h-6"
+                  />
+                  <img
+                    src="/icons/next.svg"
+                    alt="Next.js"
+                    className="w-6 h-6"
+                  />
+                  <img
+                    src="/icons/pg.svg"
+                    alt="PostgreSQL"
+                    className="w-6 h-6"
+                  />
+                  <img
+                    src="/icons/appwrite.svg"
+                    alt="Appwrite"
+                    className="w-6 h-6"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
