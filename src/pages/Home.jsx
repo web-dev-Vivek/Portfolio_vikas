@@ -24,6 +24,7 @@ import LINUX from "../assets/linux.jpeg";
 import NEOVIM from "../assets/Neovim.png";
 import BASH from "../assets/bash.png";
 import CICD from "../assets/CICD.png";
+import REACT from "../assets/react.png";
 
 function Home() {
   return (
@@ -39,13 +40,13 @@ function Home() {
             src="https://i.pinimg.com/736x/00/fe/19/00fe191b0c4dde7d29d81c67bee0f0cb.jpg"
             alt=""
           />
-          <h1
-            className="text-3xl"
-            style={{ fontFamily: "'Share Tech Mono', monospace" }}
-          >
+          <h1 className="text-4xl" style={{ fontFamily: "'VT323', monospace" }}>
             Lorem ipsum - Lorem, ipsum dolor.
           </h1>
-          <p className="text-lg flex items-center flex-wrap">
+          <p
+            className="text-lg flex items-center flex-wrap"
+            style={{ fontFamily: "'Share Tech Mono', monospace" }}
+          >
             Lorem ipsum dolor sit amet consectetur{" "}
             <span className="inline-flex items-center justify-start text-sm bg-blue-300 px-2 py-1 rounded ml-2">
               <img className="w-[20px] h-[20px] mr-1" src={Img} alt="" />
@@ -63,24 +64,24 @@ function Home() {
             sit amet consectetur adipisicing.
           </p>
 
-          <div className="mt-20 flex items-center justify-start">
-            <button className="group flex items-center gap-2 bg-white text-black md:hover:bg-black md:hover:text-white border-2 border-white rounded-md px-4 py-3 transition-all duration-300 ease-in-out">
+          <div className="mt-10 flex items-center justify-start">
+            <button className="h-10 group flex items-center gap-2 bg-white text-black text-sm md:hover:bg-black md:hover:text-white border-2 border-white rounded-4xl px-4 py-3 transition-all duration-300 ease-in-out">
               {/* Normal Arrow */}
               <img
-                className="w-[20px] block group-hover:hidden"
+                className="w-[15px] block group-hover:hidden"
                 src={Arrow}
                 alt="Arrow Icon"
               />
               {/* Hover Arrow */}
               <img
-                className="w-[20px] hidden group-hover:block"
+                className="w-[15px] hidden group-hover:block"
                 src={ArrowW}
                 alt="Arrow Icon White"
               />
-              <p>Get in touch</p>
+              <p style={{ fontFamily: "'VT323', monospace" }}>Get in touch</p>
             </button>
           </div>
-          <div className="mt-25" style={{ fontFamily: "'Doto', sans-serif" }}>
+          <div className="mt-15" style={{ fontFamily: "'Doto', sans-serif" }}>
             Feature
           </div>
           <div
@@ -96,6 +97,7 @@ function Home() {
                 <img
                   className="rounded-t-xl"
                   src="https://via.placeholder.com/500x250"
+                  H
                   alt="NotesBuddy Screenshot"
                 />
               </div>
@@ -297,23 +299,31 @@ function Home() {
           >
             Projects
           </div>
-          <div className="flex flex-row items-center gap-8 bg-[#0F0F0F] p-6 rounded-lg max-w-3xl">
+          <div className="flex mb-30 mt-20 flex-row items-center gap-8 bg-[#0F0F0F] p-6 rounded-lg max-w-3xl">
             {/* Avatar Section */}
-            <div className="w-40 h-40 bg-yellow-400 rounded-lg flex items-center justify-center overflow-hidden">
+            <div className="w-[240px] h-[80vh] rounded-full flex items-start justify-center overflow-hidden">
               <img
-                src="your-avatar.png"
+                src="https://i.pinimg.com/736x/00/fe/19/00fe191b0c4dde7d29d81c67bee0f0cb.jpg"
                 alt="Profile Avatar"
-                className="w-full h-full object-cover"
+                className="w-full rounded-full object-cover"
               />
             </div>
 
             {/* Text + Skills */}
             <div className="flex flex-col gap-3">
               {/* Name */}
-              <h2 className="text-white text-xl font-bold">Vikas Jha</h2>
+              <h2
+                style={{ fontFamily: "'VT323', monospace" }}
+                className="text-white text-xl font-bold"
+              >
+                Vikas Jha
+              </h2>
 
               {/* Description */}
-              <p className="text-gray-300 text-sm max-w-xl">
+              <p
+                style={{ fontFamily: "'Share Tech Mono', monospace" }}
+                className="text-gray-300 text-sm max-w-xl"
+              >
                 I'm a Full Stack web developer and Open Source Contributor, I
                 love building products to solve real-world problems. I'm
                 specialized in building MVP's.
@@ -328,17 +338,24 @@ function Home() {
                     Languages
                   </h3>
                   <div className="flex flex-wrap gap-2">
-                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                    <div
+                      style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                      className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white"
+                    >
                       <img src={JAVA} alt="Java" className="w-4 h-4" /> Java
                       (Primary)
                     </div>
-                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
-                      <img src={PYTHON} alt="Python" className="w-4 h-4" />{" "}
-                      Python
+                    <div
+                      style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                      className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white"
+                    >
+                      <img src={PYTHON} alt="" className="w-4 h-4" /> Python
                     </div>
-                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
-                      <img src={JS} alt="JavaScript" className="w-4 h-4" />{" "}
-                      JavaScript
+                    <div
+                      style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                      className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white"
+                    >
+                      <img src={JS} alt="" className="w-4 h-4" /> JavaScript
                     </div>
                   </div>
                 </div>
@@ -349,23 +366,30 @@ function Home() {
                     Frameworks
                   </h3>
                   <div className="flex flex-wrap gap-2">
-                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
-                      <img
-                        src={SPRINGBOOT}
-                        alt="Spring Boot"
-                        className="w-4 h-4"
-                      />{" "}
-                      Spring Boot
+                    <div
+                      style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                      className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white"
+                    >
+                      <img src={SPRINGBOOT} alt="" className="w-4 h-4" /> Spring
+                      Boot
                     </div>
-                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
-                      <img src="/react.svg" alt="React" className="w-4 h-4" />{" "}
-                      React
+                    <div
+                      style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                      className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white"
+                    >
+                      <img src={REACT} alt="" className="w-4 h-4" /> React
                     </div>
-                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                    <div
+                      style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                      className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white"
+                    >
                       <img src={NEXT} alt="Next.js" className="w-4 h-4" />{" "}
                       Next.js
                     </div>
-                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                    <div
+                      style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                      className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white"
+                    >
                       <img src={KIVY} alt="Kivy" className="w-4 h-4" /> Kivy
                     </div>
                   </div>
@@ -377,7 +401,10 @@ function Home() {
                     Databases
                   </h3>
                   <div className="flex flex-wrap gap-2">
-                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                    <div
+                      style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                      className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white"
+                    >
                       <img
                         src={POSTGRESQL}
                         alt="PostgreSQL"
@@ -385,11 +412,17 @@ function Home() {
                       />{" "}
                       PostgreSQL
                     </div>
-                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                    <div
+                      style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                      className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white"
+                    >
                       <img src={SUPERBASE} alt="Supabase" className="w-4 h-4" />{" "}
                       Supabase
                     </div>
-                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                    <div
+                      style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                      className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white"
+                    >
                       <img src={SQLITE} alt="SQLite" className="w-4 h-4" />{" "}
                       SQLite
                     </div>
@@ -402,30 +435,51 @@ function Home() {
                     Tools & Tech
                   </h3>
                   <div className="flex flex-wrap gap-2">
-                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                    <div
+                      style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                      className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white"
+                    >
                       <img src={GIT} alt="Git" className="w-4 h-4" /> Git
                     </div>
-                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                    <div
+                      style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                      className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white"
+                    >
                       <img src={DOCKER} alt="Docker" className="w-4 h-4" />{" "}
                       Docker
                     </div>
-                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                    <div
+                      style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                      className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white"
+                    >
                       <img src={OAUTH2} alt="OAuth2" className="w-4 h-4" />{" "}
                       OAuth2
                     </div>
-                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                    <div
+                      style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                      className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white"
+                    >
                       <img src={SWAGGER} alt="Swagger" className="w-4 h-4" />{" "}
                       Swagger
                     </div>
-                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                    <div
+                      style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                      className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white"
+                    >
                       <img src={RENDER} alt="Render" className="w-4 h-4" />{" "}
                       Render
                     </div>
-                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                    <div
+                      style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                      className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white"
+                    >
                       <img src={RAILWAY} alt="Railway" className="w-4 h-4" />{" "}
                       Railway
                     </div>
-                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                    <div
+                      style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                      className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white"
+                    >
                       <img src={POSTMAN} alt="Postman" className="w-4 h-4" />{" "}
                       Postman
                     </div>
@@ -438,17 +492,29 @@ function Home() {
                     Environment & Workflow
                   </h3>
                   <div className="flex flex-wrap gap-2">
-                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                    <div
+                      style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                      className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white"
+                    >
                       <img src={LINUX} alt="Linux" className="w-4 h-4" /> Linux
                     </div>
-                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                    <div
+                      style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                      className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white"
+                    >
                       <img src={NEOVIM} alt="Neovim" className="w-4 h-4" />{" "}
                       Neovim
                     </div>
-                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                    <div
+                      style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                      className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white"
+                    >
                       <img src={BASH} alt="Bash" className="w-4 h-4" /> Bash
                     </div>
-                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                    <div
+                      style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                      className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white"
+                    >
                       <img src={CICD} alt="CI/CD" className="w-4 h-4" /> CI/CD
                     </div>
                   </div>
