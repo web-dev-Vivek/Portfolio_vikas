@@ -4,6 +4,26 @@ import Navbar from "../components/Navbar";
 import Img from "../assets/react.png";
 import Arrow from "../assets/arrow.png";
 import ArrowW from "../assets/arrowW.png";
+import JAVA from "../assets/java.png";
+import PYTHON from "../assets/python.png";
+import JS from "../assets/js.png";
+import SPRINGBOOT from "../assets/springboot.png";
+import NEXT from "../assets/next.png";
+import KIVY from "../assets/Kivy.png";
+import POSTGRESQL from "../assets/Postgresql.png";
+import SUPERBASE from "../assets/supabase.webp";
+import SQLITE from "../assets/sqlite.svg";
+import GIT from "../assets/git.png";
+import DOCKER from "../assets/docker.png";
+import OAUTH2 from "../assets/Oauth.png";
+import SWAGGER from "../assets/Swagger.png";
+import RENDER from "../assets/Render.png";
+import RAILWAY from "../assets/Railway.png";
+import POSTMAN from "../assets/Postman.png";
+import LINUX from "../assets/linux.jpeg";
+import NEOVIM from "../assets/Neovim.png";
+import BASH from "../assets/bash.png";
+import CICD from "../assets/CICD.png";
 
 function Home() {
   return (
@@ -300,42 +320,138 @@ function Home() {
               </p>
 
               {/* Skills */}
-              <div>
-                <h3 className="text-gray-400 text-sm font-semibold mb-1">
-                  Skills
-                </h3>
-                <div className="flex items-center gap-2">
-                  <img src="/icons/react.svg" alt="React" className="w-6 h-6" />
-                  <img
-                    src="/icons/js.svg"
-                    alt="JavaScript"
-                    className="w-6 h-6"
-                  />
-                  <img
-                    src="/icons/ts.svg"
-                    alt="TypeScript"
-                    className="w-6 h-6"
-                  />
-                  <img
-                    src="/icons/mongo.svg"
-                    alt="MongoDB"
-                    className="w-6 h-6"
-                  />
-                  <img
-                    src="/icons/next.svg"
-                    alt="Next.js"
-                    className="w-6 h-6"
-                  />
-                  <img
-                    src="/icons/pg.svg"
-                    alt="PostgreSQL"
-                    className="w-6 h-6"
-                  />
-                  <img
-                    src="/icons/appwrite.svg"
-                    alt="Appwrite"
-                    className="w-6 h-6"
-                  />
+
+              <div className="space-y-6">
+                {/* Languages */}
+                <div>
+                  <h3 className="text-gray-400 text-sm font-semibold mb-2">
+                    Languages
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                      <img src={JAVA} alt="Java" className="w-4 h-4" /> Java
+                      (Primary)
+                    </div>
+                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                      <img src={PYTHON} alt="Python" className="w-4 h-4" />{" "}
+                      Python
+                    </div>
+                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                      <img src={JS} alt="JavaScript" className="w-4 h-4" />{" "}
+                      JavaScript
+                    </div>
+                  </div>
+                </div>
+
+                {/* Frameworks */}
+                <div>
+                  <h3 className="text-gray-400 text-sm font-semibold mb-2">
+                    Frameworks
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                      <img
+                        src={SPRINGBOOT}
+                        alt="Spring Boot"
+                        className="w-4 h-4"
+                      />{" "}
+                      Spring Boot
+                    </div>
+                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                      <img src="/react.svg" alt="React" className="w-4 h-4" />{" "}
+                      React
+                    </div>
+                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                      <img src={NEXT} alt="Next.js" className="w-4 h-4" />{" "}
+                      Next.js
+                    </div>
+                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                      <img src={KIVY} alt="Kivy" className="w-4 h-4" /> Kivy
+                    </div>
+                  </div>
+                </div>
+
+                {/* Databases */}
+                <div>
+                  <h3 className="text-gray-400 text-sm font-semibold mb-2">
+                    Databases
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                      <img
+                        src={POSTGRESQL}
+                        alt="PostgreSQL"
+                        className="w-4 h-4"
+                      />{" "}
+                      PostgreSQL
+                    </div>
+                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                      <img src={SUPERBASE} alt="Supabase" className="w-4 h-4" />{" "}
+                      Supabase
+                    </div>
+                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                      <img src={SQLITE} alt="SQLite" className="w-4 h-4" />{" "}
+                      SQLite
+                    </div>
+                  </div>
+                </div>
+
+                {/* Tools & Tech */}
+                <div>
+                  <h3 className="text-gray-400 text-sm font-semibold mb-2">
+                    Tools & Tech
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                      <img src={GIT} alt="Git" className="w-4 h-4" /> Git
+                    </div>
+                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                      <img src={DOCKER} alt="Docker" className="w-4 h-4" />{" "}
+                      Docker
+                    </div>
+                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                      <img src={OAUTH2} alt="OAuth2" className="w-4 h-4" />{" "}
+                      OAuth2
+                    </div>
+                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                      <img src={SWAGGER} alt="Swagger" className="w-4 h-4" />{" "}
+                      Swagger
+                    </div>
+                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                      <img src={RENDER} alt="Render" className="w-4 h-4" />{" "}
+                      Render
+                    </div>
+                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                      <img src={RAILWAY} alt="Railway" className="w-4 h-4" />{" "}
+                      Railway
+                    </div>
+                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                      <img src={POSTMAN} alt="Postman" className="w-4 h-4" />{" "}
+                      Postman
+                    </div>
+                  </div>
+                </div>
+
+                {/* Environment & Workflow */}
+                <div>
+                  <h3 className="text-gray-400 text-sm font-semibold mb-2">
+                    Environment & Workflow
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                      <img src={LINUX} alt="Linux" className="w-4 h-4" /> Linux
+                    </div>
+                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                      <img src={NEOVIM} alt="Neovim" className="w-4 h-4" />{" "}
+                      Neovim
+                    </div>
+                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                      <img src={BASH} alt="Bash" className="w-4 h-4" /> Bash
+                    </div>
+                    <div className="flex items-center gap-1 px-2 py-1 bg-zinc-800 rounded-md text-sm text-white">
+                      <img src={CICD} alt="CI/CD" className="w-4 h-4" /> CI/CD
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
