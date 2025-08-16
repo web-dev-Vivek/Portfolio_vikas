@@ -176,29 +176,29 @@ export default function Navbar() {
     },
     {
       id: "resume",
-      label: "Open Resume",
+      label: "Download Resume",
       action: () => window.open("/Resume.pdf", "_blank"),
     },
     {
-      id: "meeting",
-      label: "Schedule a Meeting",
-      action: () => window.open("https://cal.com/your-handle", "_blank"),
+      id: "X",
+      label: "Open X",
+      action: () => window.open("https://x.com/Dominusteleios", "_blank"),
     },
     {
       id: "email",
       label: "Send Email",
-      action: () => (window.location.href = "mailto:vikas@example.com"),
+      action: () => (window.location.href = "mailto:jhavikas2004@gmail.com"),
     },
     {
       id: "linkedin",
       label: "Open LinkedIn",
       action: () =>
-        window.open("https://www.linkedin.com/in/your-handle", "_blank"),
+        window.open("https://www.linkedin.com/in/vijha742", "_blank"),
     },
     {
       id: "github",
       label: "Open GitHub",
-      action: () => window.open("https://github.com/your-handle", "_blank"),
+      action: () => window.open("https://github.com/vijha742", "_blank"),
     },
   ];
 
@@ -218,25 +218,45 @@ export default function Navbar() {
           style={{ fontFamily: "'Share Tech Mono', monospace" }}
           className="hidden md:flex items-center ml-4 lg:ml-10 gap-3 lg:gap-3 text-xs lg:text-sm"
         >
-          <div className="cursor-pointer md:border-b border-transparent hover:border-white transition-all duration-500">
+          <a
+            href="/Resume.pdf"
+            target="_blank"
+            className="cursor-pointer md:border-b border-transparent hover:border-white transition-all duration-500"
+          >
             Resume{" "}
-          </div>
+          </a>
           <span>•</span>
-          <div className="cursor-pointer md:border-b border-transparent hover:border-white transition-all duration-500">
+          <a
+            href="https://x.com/Dominusteleios"
+            target="_blank"
+            className="cursor-pointer md:border-b border-transparent hover:border-white transition-all duration-500"
+          >
             X{" "}
-          </div>
+          </a>
           <span>•</span>
-          <div className="cursor-pointer md:border-b border-transparent hover:border-white transition-all duration-500">
+          <a
+            href="mailto:jhavikas2004@gmail.com"
+            target="_blank"
+            className="cursor-pointer md:border-b border-transparent hover:border-white transition-all duration-500"
+          >
             Email{" "}
-          </div>
+          </a>
           <span>•</span>
-          <div className="cursor-pointer md:border-b border-transparent hover:border-white transition-all duration-500">
+          <a
+            href="/https://www.linkedin.com/in/vijha742"
+            target="_blank"
+            className="cursor-pointer md:border-b border-transparent hover:border-white transition-all duration-500"
+          >
             LinkedIn{" "}
-          </div>
+          </a>
           <span>•</span>
-          <div className="cursor-pointer md:border-b border-transparent hover:border-white transition-all duration-500">
+          <a
+            href="/https://github.com/vijha742"
+            target="_blank"
+            className="cursor-pointer md:border-b border-transparent hover:border-white transition-all duration-500"
+          >
             Github
-          </div>
+          </a>
         </div>
 
         {/* Right side: nav + search */}
