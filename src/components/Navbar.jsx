@@ -177,7 +177,7 @@ export default function Navbar() {
     {
       id: "resume",
       label: "Open Resume",
-      action: () => window.open("/resume.pdf", "_blank"),
+      action: () => window.open("/Resume.pdf", "_blank"),
     },
     {
       id: "meeting",
@@ -218,23 +218,23 @@ export default function Navbar() {
           style={{ fontFamily: "'Share Tech Mono', monospace" }}
           className="hidden md:flex items-center ml-4 lg:ml-10 gap-3 lg:gap-3 text-xs lg:text-sm"
         >
-          <div className="md:border-b border-transparent hover:border-white transition-all duration-500">
+          <div className="cursor-pointer md:border-b border-transparent hover:border-white transition-all duration-500">
             Resume{" "}
           </div>
           <span>•</span>
-          <div className="md:border-b border-transparent hover:border-white transition-all duration-500">
+          <div className="cursor-pointer md:border-b border-transparent hover:border-white transition-all duration-500">
             X{" "}
           </div>
           <span>•</span>
-          <div className="md:border-b border-transparent hover:border-white transition-all duration-500">
+          <div className="cursor-pointer md:border-b border-transparent hover:border-white transition-all duration-500">
             Email{" "}
           </div>
           <span>•</span>
-          <div className="md:border-b border-transparent hover:border-white transition-all duration-500">
+          <div className="cursor-pointer md:border-b border-transparent hover:border-white transition-all duration-500">
             LinkedIn{" "}
           </div>
           <span>•</span>
-          <div className="md:border-b border-transparent hover:border-white transition-all duration-500">
+          <div className="cursor-pointer md:border-b border-transparent hover:border-white transition-all duration-500">
             Github
           </div>
         </div>
