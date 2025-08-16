@@ -223,7 +223,7 @@ export default function Navbar() {
           </div>
           <span>•</span>
           <div className="md:border-b border-transparent hover:border-white transition-all duration-500">
-            Meeting{" "}
+            X{" "}
           </div>
           <span>•</span>
           <div className="md:border-b border-transparent hover:border-white transition-all duration-500">
