@@ -8,9 +8,7 @@ function CommandPalette({ open, onClose, commands = [] }) {
 
   useEffect(() => {
     if (open) {
-      // Focus the input when palette opens
       setTimeout(() => inputRef.current?.focus(), 0);
-      // Prevent background scroll
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
@@ -21,7 +19,6 @@ function CommandPalette({ open, onClose, commands = [] }) {
     };
   }, [open]);
 
-  // Close on outside click
   useEffect(() => {
     function handleClickOutside(e) {
       if (open && dialogRef.current && !dialogRef.current.contains(e.target)) {
@@ -32,7 +29,6 @@ function CommandPalette({ open, onClose, commands = [] }) {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [open, onClose]);
 
-  // Close on ESC
   useEffect(() => {
     function onKey(e) {
       if (!open) return;
@@ -130,7 +126,6 @@ function CommandPalette({ open, onClose, commands = [] }) {
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
-  // Open palette with Ctrl/Cmd + K
   useEffect(() => {
     function onKey(e) {
       const isMac = navigator.platform.toUpperCase().includes("MAC");
@@ -144,36 +139,8 @@ export default function Navbar() {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
-  // Example command actions (replace with your router / links)
+  // 🚀 Only external / useful commands (no Home/About/Contact)
   const commands = [
-    {
-      id: "home",
-      label: "Go to Home",
-      kbd: "G H",
-      action: () =>
-        document.getElementById("home")?.scrollIntoView({ behavior: "smooth" }),
-      hint: "Scroll to #home section",
-    },
-    {
-      id: "about",
-      label: "Go to About",
-      kbd: "G A",
-      action: () =>
-        document
-          .getElementById("about")
-          ?.scrollIntoView({ behavior: "smooth" }),
-      hint: "Scroll to #about section",
-    },
-    {
-      id: "contact",
-      label: "Go to Contact",
-      kbd: "G C",
-      action: () =>
-        document
-          .getElementById("contact")
-          ?.scrollIntoView({ behavior: "smooth" }),
-      hint: "Scroll to #contact section",
-    },
     {
       id: "resume",
       label: "Download Resume",
@@ -203,11 +170,11 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="w-screen fixed text-white top-0 left-0 z-50">
+    <div className="w-screen fixed mt-3 text-white top-0 left-0 z-50">
       <div className="flex items-center h-full px-4 sm:px-6 lg:px-10 gap-4">
         {/* Brand */}
         <div
-          className="text-4xl sm:text-5xl lg:text-6xl font-bold"
+          className="text-5xl md:text-5xl font-bold"
           style={{ fontFamily: "'VT323', monospace" }}
         >
           VJ
@@ -243,7 +210,7 @@ export default function Navbar() {
           </a>
           <span>•</span>
           <a
-            href="/https://www.linkedin.com/in/vijha742"
+            href="https://www.linkedin.com/in/vijha742"
             target="_blank"
             className="cursor-pointer md:border-b border-transparent hover:border-white transition-all duration-500"
           >
@@ -251,7 +218,7 @@ export default function Navbar() {
           </a>
           <span>•</span>
           <a
-            href="/https://github.com/vijha742"
+            href="https://github.com/vijha742"
             target="_blank"
             className="cursor-pointer md:border-b border-transparent hover:border-white transition-all duration-500"
           >
@@ -259,48 +226,12 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Right side: nav + search */}
-        <div className="flex items-center gap-3 lg:gap-4 ml-auto">
-          <div
-            style={{ fontFamily: "'Share Tech Mono', monospace" }}
-            className="hidden sm:flex gap-3 lg:gap-4 text-xs lg:text-sm"
-          >
-            <button
-              className="md:border-b border-transparent hover:border-white transition-all duration-500"
-              onClick={() =>
-                document
-                  .getElementById("home")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-            >
-              HOME
-            </button>
-            <button
-              className="md:border-b border-transparent hover:border-white transition-all duration-500"
-              onClick={() =>
-                document
-                  .getElementById("about")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-            >
-              ABOUT
-            </button>
-            <button
-              className="md:border-b border-transparent hover:border-white transition-all duration-500"
-              onClick={() =>
-                document
-                  .getElementById("contact")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-            >
-              CONTACT
-            </button>
-          </div>
-
-          {/* Search input that opens the palette */}
+        {/* Right side */}
+        <div className="flex items-center  gap-3 lg:gap-4 ml-auto">
+          {/* 🔍 Search button */}
           <button
             onClick={() => setOpen(true)}
-            className="group flex items-center gap-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 px-3 sm:px-4 py-2 text-left text-white/70 focus:outline-none focus:ring-2 focus:ring-white/20"
+            className="group flex items-center gap-2 backdrop-blur-lg rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 px-3 sm:px-4 py-2 text-left text-white/70 focus:outline-none focus:ring-2 focus:ring-white/20"
             aria-label="Open search (Ctrl or ⌘ + K)"
           >
             <svg
@@ -319,7 +250,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Portal not required here; palette sits at root with higher z-index */}
+      {/* Command Palette */}
       <CommandPalette
         open={open}
         onClose={() => setOpen(false)}
